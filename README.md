@@ -15,7 +15,7 @@ A modern marketing site for SGG Construction LLC built with **Next.js 14**, **Re
 > **Prerequisite:** Node.js 18.18+ (or any version supported by Next.js 14).
 
 ```bash
-cd beyondbricks
+cd SGGCONSTRUCTION
 npm install
 npm run dev
 ```
@@ -41,7 +41,7 @@ Without the key, the form displays a configuration warning but the rest of the s
 ## 📁 Project Structure
 
 ```
-beyondbricks/
+SGGCONSTRUCTION/
 ├── app/
 │   ├── layout.tsx          # Root layout with navbar/footer wrapper
 │   ├── page.tsx            # Home page with stacked sections
