@@ -12,24 +12,21 @@ export const projects: Project[] = [
     title: "Northgate Corporate Center",
     category: "Commercial",
     location: "Bellevue, WA",
-    image:
-      "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/commercial1.jpeg",
   },
   {
     id: 2,
     title: "Skyline Residences",
     category: "Residential",
     location: "Seattle, WA",
-    image:
-      "https://images.unsplash.com/photo-1500576992153-0271099def59?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/residential1.jpg",
   },
   {
     id: 3,
     title: "Evergreen Innovation Hub",
     category: "Residential",
     location: "Redmond, WA",
-    image:
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/residential2.jpg",
   },
   {
     id: 4,
@@ -44,8 +41,7 @@ export const projects: Project[] = [
     title: "Bluewater Logistics",
     category: "Commercial",
     location: "Kent, WA",
-    image:
-      "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/commercial3.jpeg",
   },
   {
     id: 6,
@@ -53,7 +49,7 @@ export const projects: Project[] = [
     category: "Commercial",
     location: "Everett, WA",
     image:
-      "https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?auto=format&fit=crop&w=1200&q=80",
+      "/images/commercial2.jpeg",
   },
   {
     id: 7,
@@ -69,15 +65,14 @@ export const projects: Project[] = [
     category: "Commercial",
     location: "Spokane, WA",
     image:
-      "https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1200&q=80",
+      "/images/commercial4.jpeg",
   },
   {
     id: 9,
     title: "Blue Horizon Condominiums",
     category: "Residential",
     location: "Portland, OR",
-    image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/residential3.jpeg",
   },
 ];
 

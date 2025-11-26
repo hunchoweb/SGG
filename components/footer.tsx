@@ -1,13 +1,5 @@
 import Link from "next/link";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Twitter,
-} from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Twitter } from "lucide-react";
 
 const currentYear = new Date().getFullYear();
 
@@ -43,7 +35,9 @@ export default function Footer() {
             SGG <span className="text-brand-blue-light">Construction LLC</span>
           </h3>
           <p className="mb-6 max-w-xs text-sm leading-relaxed text-brand-sky/80">
-            Building quality structures with integrity and excellence since 2008. SGG Construction LLC is your trusted partner for all construction, remodeling, renovation, and general contracting needs.
+            Building quality structures with integrity and excellence since
+            2008. SGG Construction LLC is your trusted partner for all
+            construction, remodeling, renovation, and general contracting needs.
           </p>
           <div className="flex gap-4">
             {socialLinks.map(({ icon: Icon, href, label }) => (
@@ -77,15 +71,19 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="mb-6 text-lg font-semibold text-white">Our Services</h4>
+          <h4 className="mb-6 text-lg font-semibold text-white">
+            Our Services
+          </h4>
           <ul className="space-y-3 text-sm">
             {services.map((service) => (
-              <li
-                key={service}
-                className="flex items-center gap-2 transition-colors duration-200 hover:text-white"
-              >
-                <span className="text-brand-blue-light">›</span>
-                {service}
+              <li key={service}>
+                <Link
+                  href="/services"
+                  className="flex items-center gap-2 transition-colors duration-200 hover:text-white"
+                >
+                  <span className="text-brand-blue-light">›</span>
+                  {service}
+                </Link>
               </li>
             ))}
           </ul>
@@ -95,27 +93,10 @@ export default function Footer() {
           <h4 className="mb-6 text-lg font-semibold text-white">Contact Us</h4>
           <ul className="space-y-4 text-sm">
             <li className="flex items-start gap-3">
-              <MapPin className="mt-1 text-brand-blue-light" size={20} />
-              <a
-                href="https://maps.google.com/?q=123+Builder's+Lane+Your+City+State+12345"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="transition-colors duration-200 hover:text-white"
-              >
-                123 Builder&apos;s Lane, Your City, State 12345
-              </a>
-            </li>
-            <li className="flex items-start gap-3">
-              <Phone className="mt-1 text-brand-blue-light" size={20} />
-              <a
-                href="tel:+15550123456"
-                className="transition-colors duration-200 hover:text-white"
-              >
-                (555) 012-3456
-              </a>
-            </li>
-            <li className="flex items-start gap-3">
-              <Mail className="mt-1 text-brand-blue-light" size={20} />
+              <Mail
+                className="text-brand-blue-light"
+                style={{ width: "1lh", height: "1lh" }}
+              />
               <a
                 href="mailto:info@sggconstruction.com"
                 className="transition-colors duration-200 hover:text-white"
@@ -125,7 +106,9 @@ export default function Footer() {
             </li>
           </ul>
           <div className="mt-6">
-            <h5 className="mb-3 text-sm font-semibold text-white">Business Hours</h5>
+            <h5 className="mb-3 text-sm font-semibold text-white">
+              Business Hours
+            </h5>
             <ul className="space-y-2 text-xs text-brand-sky/80">
               <li className="flex justify-between">
                 <span>Monday - Friday</span>
@@ -134,9 +117,12 @@ export default function Footer() {
             </ul>
           </div>
           <div className="mt-6">
-            <h5 className="mb-3 text-sm font-semibold text-white">Service Areas</h5>
+            <h5 className="mb-3 text-sm font-semibold text-white">
+              Service Areas
+            </h5>
             <p className="text-xs text-brand-sky/80">
-              Proudly serving USA and surrounding areas. Contact us to confirm service availability in your location.
+              Proudly serving USA and surrounding areas. Contact us to confirm
+              service availability in your location.
             </p>
           </div>
         </div>
@@ -160,4 +146,3 @@ export default function Footer() {
     </footer>
   );
 }
-

@@ -1,40 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import { CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
+import { CheckCircle2, Mail, Send } from "lucide-react";
 
 type FormData = {
   name: string;
   email: string;
-  phone: string;
   message: string;
 };
 
 const INITIAL_FORM: FormData = {
   name: "",
   email: "",
-  phone: "",
   message: "",
 };
 
 const contactDetails = [
   {
-    icon: Phone,
-    label: "Call us",
-    value: "(555) 012-3456",
-    href: "tel:+15550123456",
-  },
-  {
     icon: Mail,
     label: "Email",
     value: "info@sggconstruction.com",
     href: "mailto:info@sggconstruction.com",
-  },
-  {
-    icon: MapPin,
-    label: "Office",
-    value: "123 Builder's Lane, Your City, State 12345",
-    href: "https://maps.google.com/?q=123+Builder's+Lane+Your+City+State+12345",
   },
 ];
 

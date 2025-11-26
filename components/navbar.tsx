@@ -13,7 +13,6 @@ type NavLink = {
 };
 
 const navLinks: NavLink[] = [
-  { name: "Home", href: "/#home", isSection: true },
   { name: "About", href: "/about" },
   { name: "Projects", href: "/projects" },
   { name: "Services", href: "/services" },
@@ -78,9 +77,9 @@ export default function Navbar() {
           <Image
             src="/images/SGG_logo.png"
             alt="SGG Construction LLC"
-            width={140}
-            height={140}
-            className="h-24 w-auto transition-transform duration-300 hover:scale-105"
+            width={120}
+            height={120}
+            className="h-16 w-auto transition-transform duration-300 hover:scale-105"
             priority
           />
         </Link>

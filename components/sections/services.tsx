@@ -94,9 +94,15 @@ export default function ServicesSection({
                   {keyPoints.map((point, index) => (
                     <li
                       key={index}
-                      className="flex items-start gap-2 text-sm text-brand-slate/80"
+                      className="flex gap-2 text-sm text-brand-slate/80"
                     >
-                      <span className="mt-1.5 text-brand-blue">•</span>
+                      <span
+                        className="flex items-center text-brand-blue"
+                        style={{ height: "1lh" }}
+                        aria-hidden="true"
+                      >
+                        •
+                      </span>
                       <span>{point}</span>
                     </li>
                   ))}
@@ -104,7 +110,7 @@ export default function ServicesSection({
               )}
               <a
                 href="/contact"
-                className="mt-auto inline-flex items-center gap-2 font-semibold text-brand-blue transition-transform duration-200 hover:translate-x-1"
+                className="mt-4 inline-flex items-center gap-2 font-semibold text-brand-blue transition-transform duration-200 hover:translate-x-1"
               >
                 Learn more →
               </a>
@@ -125,7 +131,7 @@ export default function ServicesSection({
             href="/contact"
             className="mt-6 inline-flex items-center justify-center rounded-full bg-white px-8 py-3 font-semibold text-brand-blue-dark shadow-lg shadow-brand-blue/20 transition-transform duration-200 hover:-translate-y-0.5"
           >
-            Call (555) 012-3456 or Email Us Today
+            Email Us Today
           </a>
         </div>
       </div>
