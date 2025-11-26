@@ -1,100 +1,86 @@
-# SGG Construction LLC — Next.js Website
+# SGG Construction LLC Marketing Site
 
-A modern marketing site for SGG Construction LLC built with **Next.js 14**, **React 18**, **TypeScript**, and **Tailwind CSS**. The refreshed experience keeps the original layout while adopting the company’s blue-and-white visual identity and updated project imagery.
+A production-ready marketing experience designed to help SGG Construction LLC win higher-value commercial projects. I modernized the legacy layout with a refined visual system, faster page delivery, and modular content blocks so non-technical teammates can update copy, imagery, and CTAs without touching the framework.
 
-## ✨ Highlights
+## Business Outcomes
 
-- **Brand-forward styling** using the provided SGG Construction LLC logo and new blue/white palette.
-- **App Router architecture** with fast routing, metadata, and server + client component composition.
-- **Reusable content modules** for hero, services, testimonials, and contact call-to-actions.
-- **TypeScript data sources** (`/data`) powering dynamic project and testimonial listings.
-- **Responsive UI** with smooth scroll behavior, mobile navigation, and accessible typography.
+- **Brand-consistent storytelling** – refreshed typography, blue/white palette, and curated project photography aligned to the company’s design guide.
+- **Faster lead capture** – persistent contact CTAs and a dedicated conversion page wired to Web3Forms.
+- **Portfolio credibility** – dynamic project and testimonial feeds fed by typed content sources instead of hard-coded HTML.
+- **Operational sustainability** – reusable sections and data-driven configs reduce maintenance time and onboarding risk.
 
-## 🚀 Quick Start
+## Technical Highlights
 
-> **Prerequisite:** Node.js 18.18+ (or any version supported by Next.js 14).
+- **Next.js 14 App Router** with nested layouts, route-level metadata, and streaming-ready server components to keep Time-to-Interactive low.
+- **Hybrid server/client composition**: data-driven hero/services/testimonial modules render on the server while interactivity (mobile nav, smooth scroll) stays on lightweight client components.
+- **TypeScript-first content model** located in `/data`, exposing strong typing for cards, services, and testimonials.
+- **Tailwind CSS 3.4** extended theme (`brand-blue`, `brand-navy`, `brand-sky`) plus global motion + scrollbar polish in `app/globals.css`.
+- **Optimized assets** hosted under `/public/images` and leveraged via Next `<Image>` where beneficial.
+
+## Local Development
+
+> Requires Node.js 18.18+ (Next.js 14 baseline) and npm.
 
 ```bash
-cd SGGCONSTRUCTION
+git clone https://github.com/<your-handle>/sggconstruction.git
+cd sggconstruction
 npm install
 npm run dev
 ```
 
-Visit `http://localhost:3000` to view the site. Additional scripts:
+Visit `http://localhost:3000`. Additional scripts:
 
 ```bash
-npm run build   # production build
-npm run start   # run the production server
-npm run lint    # Next.js lint checks
+npm run build   # production compile + type checks
+npm run start   # serve the production build
+npm run lint    # Next.js lint rules + TypeScript
 ```
 
-## 🔐 Environment Variables
+## Environment Variables
 
-The contact form submits to Web3Forms. Add the public access key before deploying:
+`NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` powers the contact form submission pipeline. Without it, the UI surfaces a configuration warning so QA can still validate page content.
 
 ```
 NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY=your-access-key
 ```
 
-Without the key, the form displays a configuration warning but the rest of the site works normally.
-
-## 📁 Project Structure
+## Project Layout
 
 ```
-SGGCONSTRUCTION/
+sggconstruction/
 ├── app/
-│   ├── layout.tsx          # Root layout with navbar/footer wrapper
-│   ├── page.tsx            # Home page with stacked sections
-│   ├── contact/page.tsx    # Dedicated contact page
-│   └── projects/page.tsx   # Portfolio listings with filters
+│   ├── layout.tsx        # root shell, metadata, navbar/footer wrapper
+│   ├── page.tsx          # home page composed of reusable sections
+│   ├── contact/page.tsx  # high-intent conversion flow
+│   └── projects/page.tsx # filterable portfolio grid
 ├── components/
-│   ├── client-layout.tsx   # Handles loading screen + global wrappers
-│   ├── navbar.tsx, footer.tsx, loading-screen.tsx
-│   ├── projects/portfolio-grid.tsx
-│   └── sections/           # Hero, About, Services, etc.
+│   ├── client-layout.tsx # handles loading experience + scroll behavior
+│   ├── navbar.tsx        # responsive nav with mobile drawer
+│   ├── footer.tsx        # contact + certifications
+│   └── sections/         # hero, services, testimonials, etc.
 ├── data/
-│   ├── projects.ts         # Unsplash-backed project cards
-│   ├── services.ts         # Service descriptions + icons
-│   └── testimonials.ts     # Client quotes
-├── public/images/sgg-logo.png
-├── tailwind.config.js
-├── app/globals.css
+│   ├── projects.ts       # curated card data (title, scope, hero image)
+│   ├── services.ts       # service definitions + Lucide icons
+│   └── testimonials.ts   # client quotes + attribution
+├── public/images/        # optimized JPEG hero/portfolio imagery
+├── tailwind.config.js    # theme tokens + motion utilities
+├── app/globals.css       # base styles, typography, animations
 └── next.config.mjs
 ```
 
-## 🎨 Theming & Assets
+## Customization Playbook
 
-- Tailwind color tokens are defined in `tailwind.config.js` (`brand-blue`, `brand-navy`, `brand-sky`, etc.).
-- Global CSS overrides (scrollbar, animations) live in `app/globals.css`.
-- Replace `/public/images/sgg-logo.png` with the high-resolution logo provided by the brand guide.
-- Section backgrounds and imagery use curated Unsplash links; swap them for project photography when available.
+- **Branding** – swap `/public/images/sgg-logo.png` and update `tailwind.config.js` palette tokens to match new brand guides.
+- **Hero & messaging** – edit `components/sections/hero.tsx` for headline, subcopy, and CTA text.
+- **Services/testimonials/projects** – update the respective files in `/data`; TypeScript types enforce content completeness.
+- **Navigation & contact** – adjust social links, phone/email, and location in `components/navbar.tsx` and `components/footer.tsx`.
 
-## 🧩 Customization Tips
+## Deployment Notes
 
-- Update hero copy or CTAs in `components/sections/hero.tsx`.
-- Modify services via `data/services.ts`; icons leverage Lucide so any icon component can be swapped.
-- Adjust testimonials in `data/testimonials.ts`.
-- Change navigation links or contact details inside `components/navbar.tsx` and `components/footer.tsx`.
-
-## 📦 Tech Stack
-
-- Next.js 14 (App Router, Streaming, Image Optimization)
-- React 18 with server/client component composition
-- TypeScript strict mode
-- Tailwind CSS 3.4 + custom theme extensions
-- Lucide React icon set
-
-## 📄 Deployment
-
-The project is ready for deployment on Vercel:
-
-```bash
-npm run build
-npm run start
-```
-
-Ensure `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` is set in your environment variables before going live.
+- Optimized for Vercel, but any Node-friendly platform works. Run `npm run build` followed by `npm run start`.
+- Ensure `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` is defined in the hosting provider’s environment settings.
+- Image and static asset paths are relative; no additional CDN configuration required.
 
 ---
 
-Built with care for **SGG Construction LLC** — delivering structures that stand the test of time.
+Built with care for **SGG Construction LLC** Delivering structures that stand the test of time.
