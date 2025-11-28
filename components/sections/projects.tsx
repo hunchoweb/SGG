@@ -41,10 +41,10 @@ export default function ProjectsSection() {
               <div className="absolute left-0 top-0 rounded-br-3xl bg-brand-blue px-4 py-2 text-xs font-semibold uppercase tracking-wide">
                 {project.category}
               </div>
-              <div className="absolute inset-x-0 bottom-0 p-6">
+              {/* <div className="absolute inset-x-0 bottom-0 p-6">
                 <h3 className="text-xl font-semibold">{project.title}</h3>
                 <p className="mt-2 text-sm text-white/70">{project.location}</p>
-              </div>
+              </div> */}
             </article>
           ))}
         </div>

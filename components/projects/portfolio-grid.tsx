@@ -61,14 +61,14 @@ export default function PortfolioGrid({ projects }: PortfolioGridProps) {
                 {project.category}
               </div>
             </div>
-            <div className="space-y-2 p-6">
+            {/* <div className="space-y-2 p-6">
               <h3 className="text-xl font-semibold text-brand-blue-dark">
                 {project.title}
               </h3>
               <p className="text-sm font-medium uppercase tracking-[0.08em] text-brand-blue/80">
                 {project.location}
               </p>
-            </div>
+            </div> */}
           </article>
         ))}
       </div>
