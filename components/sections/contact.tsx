@@ -6,12 +6,14 @@ import { CheckCircle2, Mail, Send } from "lucide-react";
 type FormData = {
   name: string;
   email: string;
+  phone: string;
   message: string;
 };
 
 const INITIAL_FORM: FormData = {
   name: "",
   email: "",
+  phone: "",
   message: "",
 };
 
