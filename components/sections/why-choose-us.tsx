@@ -1,9 +1,4 @@
-import {
-  Award,
-  MessageSquare,
-  ShieldCheck,
-  Leaf,
-} from "lucide-react";
+import { Award, MessageSquare, ShieldCheck, Leaf } from "lucide-react";
 
 const commitments = [
   {
@@ -34,15 +29,16 @@ const commitments = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="bg-brand-sky py-20 md:py-28">
+    <section className="bg-brand-navy py-20 text-white md:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <h2 className="text-4xl font-semibold text-brand-blue-dark md:text-5xl">
-            Our{" "}
-            <span className="text-brand-blue">Commitment</span>
+        <div className="mx-auto mb-16 max-w-3xl text-center">
+          <h2 className="text-4xl font-semibold md:text-5xl">
+            Our <span className="text-brand-blue-light">Commitment</span>
           </h2>
-          <p className="mt-6 text-lg text-brand-slate/80">
-            The core values that guide every project and define our promise to you.
+          <div className="mx-auto mt-4 h-1 w-20 rounded bg-brand-blue-light" />
+          <p className="mt-6 text-lg text-white/70">
+            The core values that guide every project and define our promise to
+            you.
           </p>
         </div>
 
@@ -50,7 +46,7 @@ export default function WhyChooseUs() {
           {commitments.map(({ title, description, icon: Icon }) => (
             <article
               key={title}
-              className="group h-full rounded-3xl border border-transparent bg-white p-8 shadow-lg shadow-brand-sky/50 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/40 hover:shadow-brand-blue/20"
+              className="group h-full rounded-3xl border border-transparent bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-brand-blue/40"
             >
               <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-blue/10 text-brand-blue">
                 <Icon size={28} />
@@ -68,4 +64,3 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
@@ -9,18 +10,13 @@ export default function Hero() {
       className="relative flex min-h-[100vh] items-center justify-center overflow-hidden pt-20"
     >
       <div className="absolute inset-0">
-        <video
-          className="h-full w-full object-cover"
-          autoPlay
-          loop
-          muted
-          playsInline
-        >
-          <source
-            src="https://res.cloudinary.com/dqnmei79h/video/upload/v1763102641/Hero_video_hcfels.mp4"
-            type="video/mp4"
-          />
-        </video>
+        <Image
+          src="/images/residential2.jpg"
+          alt="SGG Construction residential project"
+          fill
+          priority
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-blue-dark/90 via-brand-blue/80 to-brand-blue-light/60" />
       </div>
 

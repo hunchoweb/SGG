@@ -10,7 +10,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Northgate Corporate Center",
-    category: "Commercial",
+    category: "Residential",
     location: "Bellevue, WA",
     image: "/images/commercial1.jpeg",
   },
@@ -34,7 +34,7 @@ export const projects: Project[] = [
     category: "Commercial",
     location: "Tacoma, WA",
     image:
-      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80",
+      "/images/commercial4.jpeg",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     category: "Commercial",
     location: "Kirkland, WA",
     image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80",
+      "/images/commercial5.jpeg",
   },
   {
     id: 8,
@@ -65,7 +65,7 @@ export const projects: Project[] = [
     category: "Commercial",
     location: "Spokane, WA",
     image:
-      "/images/commercial4.jpeg",
+      "/images/commercial6.jpeg",
   },
   {
     id: 9,

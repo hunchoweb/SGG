@@ -85,10 +85,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section
-      id="contact"
-      className="bg-brand-sky py-20 md:py-28"
-    >
+    <section id="contact" className="bg-brand-sky py-20 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-wider text-brand-blue">
@@ -121,18 +118,6 @@ export default function ContactSection() {
               </a>
             ))}
           </div>
-
-          <div className="mt-10 rounded-2xl bg-white p-6 shadow-brand-sky/40">
-            <h3 className="text-lg font-semibold text-brand-blue-dark">
-              Office hours
-            </h3>
-            <ul className="mt-4 space-y-2 text-sm text-brand-slate/80">
-              <li className="flex justify-between">
-                <span>Monday — Friday</span>
-                <span className="font-medium text-brand-blue">9:00 AM – 6:00 PM</span>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="rounded-3xl bg-white p-8 shadow-brand-sky/60 md:p-10">
@@ -145,13 +130,8 @@ export default function ContactSection() {
 
           {isSubmitted ? (
             <div className="mt-8 rounded-2xl border border-brand-blue/30 bg-brand-blue/10 p-8 text-center text-brand-blue-dark">
-              <CheckCircle2
-                size={48}
-                className="mx-auto text-brand-blue"
-              />
-              <h4 className="mt-4 text-xl font-semibold">
-                Message received!
-              </h4>
+              <CheckCircle2 size={48} className="mx-auto text-brand-blue" />
+              <h4 className="mt-4 text-xl font-semibold">Message received!</h4>
               <p className="mt-2 text-sm text-brand-slate/70">
                 Thank you for reaching out. Our team will get in touch shortly.
               </p>
@@ -248,4 +228,3 @@ export default function ContactSection() {
     </section>
   );
 }
-
